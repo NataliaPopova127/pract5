@@ -34,12 +34,17 @@
 
         <StackPanel Grid.Row="1" Grid.Column="1" Grid.RowSpan="2">
             <TextBlock Text="выбор функции"  FontSize="20"/>
-            <RadioButton Content="cos(x)"  FontSize="20"/>
-            <RadioButton Content="sqr(x)"  FontSize="20"/>
-            <RadioButton Content="exp(x)" FontSize="20"/>
+            <RadioButton x:Name="rbCos" Content="cos(x)"  FontSize="20"/>
+            <RadioButton x:Name="rbSqr" Content="sqr(x)"  FontSize="20"/>
+            <RadioButton x:Name="rbExp" Content="exp(x)" FontSize="20"/>
+
         </StackPanel>
 
         <TextBlock Grid.Row="4" FontSize="20" Text="В этом поле будет выводиться результат" x:Name="tbResult"/>
-        <Button x:Name="btnRes" Content="Вычислить" Grid.Column="1" Grid.Row="4" Height="50" Width="200" Click="btnRes_Click"/>
+        <StackPanel Grid.Column="1" Grid.Row="4">
+            <Button x:Name="btnRes" Content="Вычислить"  Height="50" Width="200" Click="btnRes_Click" Margin="0 0 0 50"/>
+            <CheckBox x:Name="cbColor" Content="Ответ красным цветом" Checked="cbColor_Checked" Unchecked="cbColor_Checked"/>
+        </StackPanel>
+        
     </Grid>
 </Page>
